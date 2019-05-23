@@ -5,7 +5,7 @@ const hbs = require(`hbs`);
 const getLocation = require('../utils/getLocation');
 const getWeather = require('../utils/getWeather');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, `../public`);
 const viewsPath = path.join(__dirname, `../templates/views`);
@@ -95,6 +95,6 @@ app.get(`*`, (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is up on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is up on port: ${PORT}`);
 });
